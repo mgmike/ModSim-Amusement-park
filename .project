@@ -3,6 +3,7 @@
 	<name>AmusementPark</name>
 	<comment></comment>
 	<projects>
+		<project>queueinglib</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
