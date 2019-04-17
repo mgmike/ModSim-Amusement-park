@@ -39,19 +39,19 @@ network AmusementParkNetwork
             @display("p=791,320");
         }
         Ride1Queue: Queue {
-            @display("p=962,39");
+            @display("p=954,182");
         }
         Ride2Queue: Queue {
-            @display("p=962,147");
+            @display("p=954,249");
         }
         Ride3Queue: Queue {
-            @display("p=962,293");
+            @display("p=954,320");
         }
         Ride4Queue: Queue {
-            @display("p=962,412;b=17,5");
+            @display("p=954,393;b=17,5");
         }
         Ride5Queue: Queue {
-            @display("p=962,526");
+            @display("p=954,471");
         }
         TicketBooth1: Server {
             @display("p=335,172");
@@ -60,19 +60,19 @@ network AmusementParkNetwork
             @display("p=335,261");
         }
         Ride1: Queue {
-            @display("p=1091,39");
+            @display("p=1083,182");
         }
         Ride2: Queue {
-            @display("p=1091,147");
+            @display("p=1083,249");
         }
         Ride3: Queue {
-            @display("p=1091,293");
+            @display("p=1083,320");
         }
         Ride4: Queue {
-            @display("p=1091,412");
+            @display("p=1083,393");
         }
         Ride5: Queue {
-            @display("p=1091,526");
+            @display("p=1083,471");
         }
         SecurityQueue1: Queue {
             @display("p=451,320");
@@ -96,19 +96,19 @@ network AmusementParkNetwork
             @display("p=335,434");
         }
         classifier: Classifier {
-            @display("p=200,323");
+            @display("p=202,320");
         }
         classifier1: Classifier {
-            @display("p=516,320");
+            @display("p=532,320");
         }
         router1: Router {
-            @display("p=1222,345");
+            @display("p=1213,320");
         }
         router2: Router {
-            @display("p=791,619");
+            @display("p=791,530");
         }
         router3: Router {
-            @display("p=1213,621");
+            @display("p=1213,532");
         }
     connections:
         router.out++ --> Ride1Queue.in++;
