@@ -22,82 +22,79 @@ import org.omnetpp.queueing.Source;
 
 network Alternate
 {
-    @display("bgb=1099,531");
+    @display("bgb=1043.7137,577.6962");
     submodules:
         source: Source {
             @display("p=31,250");
         }
         TicketQueue: Queue {
-            @display("p=99,250");
-        }
-        classifier: Classifier {
-            @display("p=168,250");
+            @display("p=122.70875,249.55376");
         }
         TicketBooth1: Server {
-            @display("p=213,161");
+            @display("p=279.88626,151.6625");
         }
         TicketBooth2: Server {
-            @display("p=213,330");
+            @display("p=279.88626,354.33875");
         }
         SecurityQ1: Queue {
-            @display("p=294,161");
+            @display("p=388.8075,151.6625");
         }
         SecurityQ2: Queue {
-            @display("p=294,330");
+            @display("p=388.8075,354.33875");
         }
         Security1: Server {
-            @display("p=360,161");
+            @display("p=500.48624,151.6625");
         }
         Security2: Server {
-            @display("p=360,330");
+            @display("p=500.48624,354.33875");
         }
         router: Router {
-            @display("p=424,250");
+            @display("p=573.56,249.55376");
         }
         RideQ1: Queue {
-            @display("p=512,69");
+            @display("p=682.48126,68.9375");
         }
         RideQ2: Queue {
-            @display("p=510,161");
+            @display("p=682.48126,159.935");
         }
         RideQ3: Queue {
-            @display("p=512,250");
+            @display("p=682.48126,249.55376");
         }
         RideQ4: Queue {
-            @display("p=510,342");
+            @display("p=682.48126,341.93");
         }
         RideQ5: Queue {
-            @display("p=510,432");
+            @display("p=682.48126,431.54874");
         }
         queue: Queue {
-            @display("p=606,69");
+            @display("p=809.32623,68.9375");
         }
         queue1: Queue {
-            @display("p=606,161");
+            @display("p=809.32623,159.935");
         }
         queue2: Queue {
-            @display("p=606,250");
+            @display("p=809.32623,249.55376");
         }
         queue3: Queue {
-            @display("p=606,342");
+            @display("p=809.32623,341.93");
         }
         queue4: Queue {
-            @display("p=606,432");
+            @display("p=809.32623,431.54874");
         }
         router1: Router {
-            @display("p=714,250");
+            @display("p=963.7463,249.55376");
         }
         router2: Router {
-            @display("p=714,493");
+            @display("p=963.7463,492.21375");
         }
         router3: Router {
-            @display("p=424,493");
+            @display("p=573.56,492.21375");
+        }
+        classifier: Classifier {
+            @display("p=215.94376,249.97125");
         }
     connections:
         source.out --> TicketQueue.in++;
-        TicketQueue.out --> classifier.in++;
-        classifier.out++ --> TicketBooth1.in++;
-        classifier.out++ --> TicketBooth2.in++;
         TicketBooth1.out --> SecurityQ1.in++;
         SecurityQ1.out --> Security1.in++;
         TicketBooth2.out --> SecurityQ2.in++;
@@ -122,4 +119,7 @@ network Alternate
         router1.out++ --> router2.in++;
         router2.out++ --> router3.in++;
         router3.out++ --> router.in++;
+        classifier.out++ --> TicketBooth1.in++;
+        classifier.rest --> TicketBooth2.in++;
+        TicketQueue.out --> classifier.in++;
 }
