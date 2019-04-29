@@ -1,0 +1,93 @@
+version 2
+run General-0-20190429-17:16:46-18332
+attr configname General
+attr datetime 20190429-17:16:46
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Alternate
+attr processid 18332
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.source.interArrivalTime exponential(1.0s)
+param **.TicketQueue.serviceTime exponential(0.25s)
+param **.TicketBooth1.serviceTime "truncnormal(1.0s , 0.5s)"
+param **.TicketBooth2.serviceTime "truncnormal(1.0s , 0.5s)"
+param **.SecurityQ1.serviceTime exponential(0.25s)
+param **.SecurityQ2.serviceTime exponential(0.25s)
+param **.Security1.serviceTime "truncnormal(0.75s , 0.5s)"
+param **.Security2.serviceTime "truncnormal(0.75s , 0.5s)"
+param **.RideQ1.serviceTime exponential(0.25s)
+param **.RideQ2.serviceTime exponential(0.25s)
+param **.RideQ3.serviceTime exponential(0.25s)
+param **.RideQ4.serviceTime exponential(0.25s)
+param **.RideQ5.serviceTime exponential(0.25s)
+param **.queue.serviceTime 100s
+param **.queue1.serviceTime 60s
+param **.queue2.serviceTime 75s
+param **.queue3.serviceTime 80s
+param **.queue4.serviceTime 90s
+param **.source.numJobs 10000
+
+vector 0 Alternate.TicketQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Alternate.SecurityQ1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Alternate.SecurityQ2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Alternate.RideQ1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 4 Alternate.RideQ2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 5 Alternate.RideQ3 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 6 Alternate.RideQ4 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 7 Alternate.RideQ5 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 8 Alternate.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 9 Alternate.queue1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 10 Alternate.queue2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 11 Alternate.queue3 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 12 Alternate.queue4 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 13 Alternate.allocate queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+0	0	0	0
+1	0	0	0
+2	0	0	0
+3	0	0	0
+4	0	0	0
+5	0	0	0
+6	0	0	0
+7	0	0	0
+8	0	0	0
+9	0	0	0
+10	0	0	0
+11	0	0	0
+12	0	0	0
+13	0	0	0
+
