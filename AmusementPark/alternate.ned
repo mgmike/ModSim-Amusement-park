@@ -13,6 +13,7 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
+import org.omnetpp.queueing.Allocate;
 import org.omnetpp.queueing.Classifier;
 import org.omnetpp.queueing.Queue;
 import org.omnetpp.queueing.Router;
@@ -31,7 +32,7 @@ network Alternate
             @display("p=122.70875,249.55376");
         }
         TicketBooth1: Server {
-            @display("p=279.88626,151.6625");
+            @display("p=303.63,99.465004");
         }
         TicketBooth2: Server {
             @display("p=279.88626,354.33875");
@@ -93,6 +94,9 @@ network Alternate
         classifier: Classifier {
             @display("p=215.94376,249.97125");
         }
+        allocate: Allocate {
+            @display("p=252.58876,172.755");
+        }
     connections:
         source.out --> TicketQueue.in++;
         TicketBooth1.out --> SecurityQ1.in++;
@@ -119,7 +123,8 @@ network Alternate
         router1.out++ --> router2.in++;
         router2.out++ --> router3.in++;
         router3.out++ --> router.in++;
-        classifier.out++ --> TicketBooth1.in++;
         classifier.rest --> TicketBooth2.in++;
         TicketQueue.out --> classifier.in++;
+        classifier.out++ --> allocate.in++;
+        allocate.out --> TicketBooth1.in++;
 }
