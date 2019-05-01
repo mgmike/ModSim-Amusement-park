@@ -27,101 +27,103 @@ import org.omnetpp.queueing.Source;
 //
 network AmusementParkNetwork
 {
-    @display("bgb=1327,692");
+    @display("bgb=1695.3612,800.26373");
     submodules:
-        TicketSink1: Source {
-            @display("p=44,320");
-        }
         TicketQueue1: Queue {
-            @display("p=129,320");
+            @display("p=203,319");
         }
-        router: Router {
-            @display("p=791,320");
+        Pathway: Router {
+            @display("p=910.0712,319.43997");
         }
         Ride1Queue: Queue {
-            @display("p=954,182");
+            @display("p=1073.1187,181.34874");
         }
         Ride2Queue: Queue {
-            @display("p=954,249");
+            @display("p=1073.1187,247.89874");
         }
         Ride3Queue: Queue {
-            @display("p=954,320");
+            @display("p=1073.1187,319.43997");
         }
         Ride4Queue: Queue {
-            @display("p=954,393;b=17,5");
+            @display("p=1073.1187,392.645;b=17,5");
         }
         Ride5Queue: Queue {
-            @display("p=954,471");
+            @display("p=1073.1187,470.84122");
         }
         TicketBooth1: Server {
-            @display("p=335,172");
+            @display("p=454.20374,171.36624");
         }
         TicketBooth2: Server {
-            @display("p=335,261");
+            @display("p=454.20374,259.54498");
         }
         Ride1: Queue {
-            @display("p=1083,182");
+            @display("p=1201.2274,181.34874");
         }
         Ride2: Queue {
-            @display("p=1083,249");
+            @display("p=1201.2274,247.89874");
         }
         Ride3: Queue {
-            @display("p=1083,320");
+            @display("p=1201.2274,319.43997");
         }
         Ride4: Queue {
-            @display("p=1083,393");
+            @display("p=1201.2274,392.645");
         }
         Ride5: Queue {
-            @display("p=1083,471");
+            @display("p=1201.2274,470.84122");
         }
         SecurityQueue1: Queue {
-            @display("p=451,320");
+            @display("p=570.6662,319.43997");
         }
         Security1: Server {
-            @display("p=686,172");
+            @display("p=805.25494,171.36624");
         }
         Security2: Server {
-            @display("p=686,261");
+            @display("p=805.25494,259.54498");
         }
         Security3: Server {
-            @display("p=686,345");
+            @display("p=805.25494,344.39624");
         }
         Security4: Server {
-            @display("p=686,434");
+            @display("p=805.25494,432.57498");
         }
         TicketBooth3: Server {
-            @display("p=335,345");
+            @display("p=454.20374,344.39624");
         }
         TicketBooth4: Server {
-            @display("p=335,434");
+            @display("p=454.20374,432.57498");
         }
         classifier: Classifier {
-            @display("p=202,320");
+            @display("p=321.10373,319.43997");
         }
         classifier1: Classifier {
-            @display("p=532,320");
+            @display("p=650.52625,319.43997");
         }
-        router1: Router {
-            @display("p=1213,320");
+        Pathway1: Router {
+            @display("p=1332.6637,319.43997");
         }
-        router2: Router {
-            @display("p=791,530");
+        Pathway3: Router {
+            @display("p=910.0712,529.07245");
         }
-        router3: Router {
-            @display("p=1213,532");
+        Pathway2: Router {
+            @display("p=1332.6637,530.7362");
+        }
+        Exit: Sink {
+            @display("p=1414.1874,319.43997");
+        }
+        source: Source {
+            @display("p=83,319");
         }
     connections:
-        router.out++ --> Ride1Queue.in++;
-        router.out++ --> Ride2Queue.in++;
-        router.out++ --> Ride3Queue.in++;
-        router.out++ --> Ride4Queue.in++;
-        router.out++ --> Ride5Queue.in++;
+        Pathway.out++ --> Ride1Queue.in++;
+        Pathway.out++ --> Ride2Queue.in++;
+        Pathway.out++ --> Ride3Queue.in++;
+        Pathway.out++ --> Ride4Queue.in++;
+        Pathway.out++ --> Ride5Queue.in++;
         Ride1Queue.out --> Ride1.in++;
         Ride2Queue.out --> Ride2.in++;
         Ride3Queue.out --> Ride3.in++;
         Ride4Queue.out --> Ride4.in++;
         Ride5Queue.out --> Ride5.in++;
-        TicketSink1.out --> TicketQueue1.in++;
         TicketQueue1.out --> classifier.in++;
         classifier.out++ --> TicketBooth1.in++;
         classifier.out++ --> TicketBooth2.in++;
@@ -136,16 +138,18 @@ network AmusementParkNetwork
         classifier1.out++ --> Security2.in++;
         classifier1.out++ --> Security3.in++;
         classifier1.rest --> Security4.in++;
-        Security1.out --> router.in++;
-        Security2.out --> router.in++;
-        Security3.out --> router.in++;
-        Security4.out --> router.in++;
-        Ride1.out --> router1.in++;
-        Ride2.out --> router1.in++;
-        Ride3.out --> router1.in++;
-        Ride4.out --> router1.in++;
-        Ride5.out --> router1.in++;
-        router2.out++ --> router.in++;
-        router1.out++ --> router3.in++;
-        router3.out++ --> router2.in++;
+        Security1.out --> Pathway.in++;
+        Security2.out --> Pathway.in++;
+        Security3.out --> Pathway.in++;
+        Security4.out --> Pathway.in++;
+        Ride1.out --> Pathway1.in++;
+        Ride2.out --> Pathway1.in++;
+        Ride3.out --> Pathway1.in++;
+        Ride4.out --> Pathway1.in++;
+        Ride5.out --> Pathway1.in++;
+        Pathway3.out++ --> Pathway.in++;
+        Pathway1.out++ --> Pathway2.in++;
+        Pathway2.out++ --> Pathway3.in++;
+        Pathway1.out++ --> Exit.in++;
+        source.out --> TicketQueue1.in++;
 }
