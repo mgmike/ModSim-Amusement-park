@@ -1,0 +1,145 @@
+file 225221 1556923687                                          
+version 2
+run General-0-20190503-18:42:39-3144
+attr configname General
+attr datetime 20190503-18:42:39
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network ParkNetworkAlt
+attr processid 3144
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.Source.interArrivalTime exponential(20s)
+param **.TicketBooth1.serviceTime "truncnormal(75s, 15s)"
+param **.TicketBooth2.serviceTime "truncnormal(75s, 15s)"
+param **.Security1.serviceTime "truncnormal(30s, 10s)"
+param **.Security2.serviceTime "truncnormal(30s, 10s)"
+param **.WalkingDelay.serviceTime 20s
+param **.Ride1.serviceTime 60s
+param **.Ride2.serviceTime 60s
+param **.Ride3.serviceTime 60s
+param **.Ride4.serviceTime 60s
+param **.Ride5.serviceTime 60s
+param **.Source.numJobs 1500
+param **.Source.jobName default
+param **.Source.jobType default
+param **.Source.jobPriority default
+param **.Source.startTime 0
+param **.Source.stopTime 18000s
+param **.TicketBooth1.fetchingAlgorithm default
+param **.TicketBooth2.fetchingAlgorithm default
+param **.SecurityQ1.capacity default
+param **.SecurityQ1.fifo true
+param **.SecurityQ2.capacity default
+param **.SecurityQ2.fifo true
+param **.Security1.fetchingAlgorithm default
+param **.Security2.fetchingAlgorithm default
+param **.RideQ1.capacity default
+param **.RideQ1.fifo true
+param **.RideQ2.capacity default
+param **.RideQ2.fifo true
+param **.RideQ3.capacity default
+param **.RideQ3.fifo true
+param **.RideQ4.capacity default
+param **.RideQ4.fifo true
+param **.RideQ5.capacity default
+param **.RideQ5.fifo true
+param **.TicketQueue.capacity default
+param **.TicketQueue.fifo true
+param **.TicketQueue.sendingAlgorithm default
+param **.WalkingDelay.capacity default
+param **.WalkingDelay.fifo true
+param **.RideSelect.routingAlgorithm default
+param **.RideSelect.randomGateIndex default
+param **.Ride1.capacity 10
+param **.Ride1.fifo true
+param **.Ride1.sendingAlgorithm default
+param **.Ride2.capacity 10
+param **.Ride2.fifo true
+param **.Ride2.sendingAlgorithm default
+param **.Ride3.capacity 10
+param **.Ride3.fifo true
+param **.Ride3.sendingAlgorithm default
+param **.Ride4.capacity 10
+param **.Ride4.fifo true
+param **.Ride4.sendingAlgorithm default
+param **.Ride5.capacity 10
+param **.Ride5.fifo true
+param **.Ride5.sendingAlgorithm default
+param **.Router.routingAlgorithm default
+param **.Router.randomGateIndex default
+param **.Sink.keepJobs false
+param **.RideQ1.serviceTime 0s
+param **.RideQ2.serviceTime 0s
+param **.RideQ3.serviceTime 0s
+param **.RideQ4.serviceTime 0s
+param **.RideQ5.serviceTime 0s
+
+vector 0 ParkNetworkAlt.RideQ1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 ParkNetworkAlt.RideQ2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 ParkNetworkAlt.RideQ3 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 ParkNetworkAlt.RideQ4 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 4 ParkNetworkAlt.RideQ5 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 5 ParkNetworkAlt.TicketQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 6 ParkNetworkAlt.WalkingDelay queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 7 ParkNetworkAlt.Ride1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 8 ParkNetworkAlt.Ride2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 9 ParkNetworkAlt.Ride3 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 10 ParkNetworkAlt.Ride4 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 11 ParkNetworkAlt.Ride5 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 12 ParkNetworkAlt.SecurityQ1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 13 ParkNetworkAlt.SecurityQ2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 14 ParkNetworkAlt.Sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	4636 4813 0 26621 0 37140 295 0 2 201 255
+1	9449 3915 0 26953 0 38460 241 0 3 164 216
+2	13364 4565 0 26712 0 37440 277 0 3 184 242
+3	17929 4767 0 26639 0 37200 293 0 3 208 278
+4	22696 4661 0 26747 0 37560 283 0 4 207 297
+5	27357 56055 0 25523 0 34224.728583964572 1835 0 438 409357 120153049
+6	83412 14907 0 25557 0 34274.247803105365 511 0 2 257 259
+7	98319 22016 0 27003 0 38820 1235 0 10 8143 63233
+8	120335 21940 0 27018 0 38940 1213 0 10 8012 62874
+9	142275 22096 0 26968 0 38580 1233 0 10 8876 71220
+10	164371 23286 0 26945 0 38460 1235 0 10 9129 76009
+11	187657 23164 0 26980 0 38640 1227 0 10 8493 68673
+12	210821 188 0 14435 0 18317.687687354782 7 0 1 3 3
+13	211009 251 0 14394 0 18264.830693801331 9 0 1 4 4
+14	211260 13959 63 27028 180 39000 445 180 23702.208220043 4856695.8080155 64901184555.153
+
