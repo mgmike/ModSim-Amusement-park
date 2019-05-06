@@ -1,0 +1,399 @@
+version 2
+run General-0-20190506-16:45:00-20764
+attr configname General
+attr datetime 20190506-16:45:00
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network AmusementNetwork
+attr processid 20764
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.Source.interArrivalTime exponential(20s)
+param **.TicketBooth1.serviceTime "truncnormal(75s, 15s)"
+param **.TicketBooth2.serviceTime "truncnormal(75s, 15s)"
+param **.TicketBooth3.serviceTime "truncnormal(75s, 15s)"
+param **.TicketBooth4.serviceTime "truncnormal(75s, 15s)"
+param **.SecurityBooth1.serviceTime "truncnormal(30s, 10s)"
+param **.SecurityBooth2.serviceTime "truncnormal(30s, 10s)"
+param **.SecurityBooth3.serviceTime "truncnormal(30s, 10s)"
+param **.SecurityBooth4.serviceTime "truncnormal(30s, 10s)"
+param **.Source.numJobs default
+param **.Source.jobName "\"Customer\""
+param **.Source.jobType default
+param **.Source.jobPriority default
+param **.Source.startTime 0s
+param **.Source.stopTime 18000s
+param **.TicketQueue.capacity default
+param **.TicketQueue.fifo true
+param **.TicketQueue.sendingAlgorithm default
+param **.TicketBooth1.fetchingAlgorithm default
+param **.TicketBooth2.fetchingAlgorithm default
+param **.TicketBooth3.fetchingAlgorithm default
+param **.TicketBooth4.fetchingAlgorithm default
+param **.SecurityQueue.capacity default
+param **.SecurityQueue.fifo true
+param **.SecurityQueue.sendingAlgorithm default
+param **.SecurityBooth1.fetchingAlgorithm default
+param **.SecurityBooth2.fetchingAlgorithm default
+param **.SecurityBooth3.fetchingAlgorithm default
+param **.SecurityBooth4.fetchingAlgorithm default
+param **.WalkingDelay.serviceTime 20s
+param **.WalkingDelay.capacity default
+param **.WalkingDelay.fifo true
+param **.Ride3.capacity 10
+param **.Ride4.capacity 10
+param **.Ride5.capacity 10
+param **.Ride2.capacity 10
+param **.Ride1.capacity 10
+param **.Ride3Queue.serviceTime 0
+param **.Ride2Queue.serviceTime 0
+param **.Ride1Queue.serviceTime 0
+param **.Ride4Queue.serviceTime 0
+param **.Ride5Queue.serviceTime 0
+param **.Sink.keepJobs false
+param **.Router.routingAlgorithm default
+param **.Router.randomGateIndex default
+param **.Ride1.serviceTime 60s
+param **.Ride2.serviceTime 60s
+param **.Ride3.serviceTime 60s
+param **.Ride4.serviceTime 60s
+param **.Ride5.serviceTime 60s
+
+scalar AmusementNetwork.Source created:last 909
+attr interpolationmode none
+attr title "the number of jobs created, last"
+scalar AmusementNetwork.TicketQueue queueingTime:mean 136.13180429235
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar AmusementNetwork.TicketQueue queueingTime:max 439.43550838665
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar AmusementNetwork.TicketQueue queueLength:timeavg 0.034698707727062
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar AmusementNetwork.TicketQueue queueLength:max 24
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar AmusementNetwork.TicketQueue dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar AmusementNetwork.TicketBooth1 busy:timeavg 0.0057110103400594
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar AmusementNetwork.TicketBooth2 busy:timeavg 0.0055547834901625
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar AmusementNetwork.TicketBooth3 busy:timeavg 0.0054927336010024
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar AmusementNetwork.TicketBooth4 busy:timeavg 0.0054186188345133
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar AmusementNetwork.SecurityQueue queueingTime:mean nan
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar AmusementNetwork.SecurityQueue queueingTime:max nan
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar AmusementNetwork.SecurityQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar AmusementNetwork.SecurityQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar AmusementNetwork.SecurityQueue dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar AmusementNetwork.SecurityBooth1 busy:timeavg 0.0037781268884377
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar AmusementNetwork.SecurityBooth2 busy:timeavg 0.0028132553323301
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar AmusementNetwork.SecurityBooth3 busy:timeavg 0.0018571818986426
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar AmusementNetwork.SecurityBooth4 busy:timeavg 0.000397554513638
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar AmusementNetwork.WalkingDelay busy:timeavg 0.0058880684026428
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar AmusementNetwork.WalkingDelay queueingTime:mean 158.1339932624
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar AmusementNetwork.WalkingDelay queueingTime:max 342.43915689904
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar AmusementNetwork.WalkingDelay queueLength:timeavg 0.046555188455604
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar AmusementNetwork.WalkingDelay queueLength:max 18
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar AmusementNetwork.WalkingDelay dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar AmusementNetwork.Ride3Queue busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar AmusementNetwork.Ride3Queue queueingTime:mean 0
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar AmusementNetwork.Ride3Queue queueingTime:max 0
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar AmusementNetwork.Ride3Queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar AmusementNetwork.Ride3Queue queueLength:max 2
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar AmusementNetwork.Ride3Queue dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar AmusementNetwork.Ride2Queue busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar AmusementNetwork.Ride2Queue queueingTime:mean 0
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar AmusementNetwork.Ride2Queue queueingTime:max 0
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar AmusementNetwork.Ride2Queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar AmusementNetwork.Ride2Queue queueLength:max 3
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar AmusementNetwork.Ride2Queue dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar AmusementNetwork.Ride1Queue busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar AmusementNetwork.Ride1Queue queueingTime:mean 0
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar AmusementNetwork.Ride1Queue queueingTime:max 0
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar AmusementNetwork.Ride1Queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar AmusementNetwork.Ride1Queue queueLength:max 3
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar AmusementNetwork.Ride1Queue dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar AmusementNetwork.Ride4Queue busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar AmusementNetwork.Ride4Queue queueingTime:mean 0
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar AmusementNetwork.Ride4Queue queueingTime:max 0
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar AmusementNetwork.Ride4Queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar AmusementNetwork.Ride4Queue queueLength:max 3
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar AmusementNetwork.Ride4Queue dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar AmusementNetwork.Ride5Queue busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar AmusementNetwork.Ride5Queue queueingTime:mean 0
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar AmusementNetwork.Ride5Queue queueingTime:max 0
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar AmusementNetwork.Ride5Queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar AmusementNetwork.Ride5Queue queueLength:max 2
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar AmusementNetwork.Ride5Queue dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar AmusementNetwork.Sink generation:mean 0
+attr interpolationmode none
+attr title "the generation of the arrived jobs, mean"
+scalar AmusementNetwork.Sink generation:max 0
+attr interpolationmode none
+attr title "the generation of the arrived jobs, max"
+scalar AmusementNetwork.Sink delaysVisited:mean 0
+attr interpolationmode none
+attr title "the total number of delays visited by arrived jobs, mean"
+scalar AmusementNetwork.Sink delaysVisited:max 0
+attr interpolationmode none
+attr title "the total number of delays visited by arrived jobs, max"
+scalar AmusementNetwork.Sink queuesVisited:mean 7.0164609053498
+attr interpolationmode none
+attr title "the total number of queues visited by arrived jobs, mean"
+scalar AmusementNetwork.Sink queuesVisited:max 37
+attr interpolationmode none
+attr title "the total number of queues visited by arrived jobs, max"
+scalar AmusementNetwork.Sink totalServiceTime:mean 359.24420290332
+attr interpolationmode none
+attr title "the total time spent  by arrived jobs, mean"
+attr unit s
+scalar AmusementNetwork.Sink totalServiceTime:max 1858.9285526133
+attr interpolationmode none
+attr title "the total time spent  by arrived jobs, max"
+attr unit s
+scalar AmusementNetwork.Sink totalDelayTime:mean 0
+attr interpolationmode none
+attr title "the total time spent in delay nodes by arrived jobs, mean"
+attr unit s
+scalar AmusementNetwork.Sink totalDelayTime:max 0
+attr interpolationmode none
+attr title "the total time spent in delay nodes by arrived jobs, max"
+attr unit s
+scalar AmusementNetwork.Sink totalQueueingTime:mean 2100.9983734944
+attr interpolationmode none
+attr title "the total time spent in queues by arrived jobs, mean"
+attr unit s
+scalar AmusementNetwork.Sink totalQueueingTime:max 12208.938868445
+attr interpolationmode none
+attr title "the total time spent in queues by arrived jobs, max"
+attr unit s
+scalar AmusementNetwork.Sink lifeTime:mean 2460.2425763977
+attr interpolationmode none
+attr title "lifetime of arrived jobs, mean"
+attr unit s
+scalar AmusementNetwork.Sink lifeTime:max 14067.867421058
+attr interpolationmode none
+attr title "lifetime of arrived jobs, max"
+attr unit s
+scalar AmusementNetwork.Ride1 busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar AmusementNetwork.Ride1 queueingTime:mean 501.60324443422
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar AmusementNetwork.Ride1 queueingTime:max 600
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar AmusementNetwork.Ride1 queueLength:timeavg 0.056697607302612
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar AmusementNetwork.Ride1 queueLength:max 10
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar AmusementNetwork.Ride1 dropped:count 145
+attr interpolationmode none
+attr title "drop event, count"
+scalar AmusementNetwork.Ride2 busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar AmusementNetwork.Ride2 queueingTime:mean 508.20760599399
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar AmusementNetwork.Ride2 queueingTime:max 600
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar AmusementNetwork.Ride2 queueLength:timeavg 0.058431694561428
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar AmusementNetwork.Ride2 queueLength:max 10
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar AmusementNetwork.Ride2 dropped:count 143
+attr interpolationmode none
+attr title "drop event, count"
+scalar AmusementNetwork.Ride3 busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar AmusementNetwork.Ride3 queueingTime:mean 478.46299514017
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar AmusementNetwork.Ride3 queueingTime:max 600
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar AmusementNetwork.Ride3 queueLength:timeavg 0.055011777197423
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar AmusementNetwork.Ride3 queueLength:max 10
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar AmusementNetwork.Ride3 dropped:count 99
+attr interpolationmode none
+attr title "drop event, count"
+scalar AmusementNetwork.Ride4 busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar AmusementNetwork.Ride4 queueingTime:mean 505.84847071585
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar AmusementNetwork.Ride4 queueingTime:max 600
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar AmusementNetwork.Ride4 queueLength:timeavg 0.057668953780276
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar AmusementNetwork.Ride4 queueLength:max 10
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar AmusementNetwork.Ride4 dropped:count 144
+attr interpolationmode none
+attr title "drop event, count"
+scalar AmusementNetwork.Ride5 busy:timeavg 0
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar AmusementNetwork.Ride5 queueingTime:mean 478.79226978437
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar AmusementNetwork.Ride5 queueingTime:max 600
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar AmusementNetwork.Ride5 queueLength:timeavg 0.053498941921106
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar AmusementNetwork.Ride5 queueLength:max 10
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar AmusementNetwork.Ride5 dropped:count 135
+attr interpolationmode none
+attr title "drop event, count"
+
