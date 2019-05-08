@@ -1,0 +1,42 @@
+file 96328 1557340148                                           
+version 2
+run General-0-20190508-14:28:33-4536
+attr configname General
+attr datetime 20190508-14:28:33
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network AmusementAlt3
+attr processid 4536
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.Source.interArrivalTime exponential(20s)
+param **.TicketBooth1.serviceTime "truncnormal(75s, 15s)"
+param **.TicketBooth2.serviceTime "truncnormal(75s, 15s)"
+param **.TicketBooth3.serviceTime "truncnormal(75s, 15s)"
+param **.TicketBooth4.serviceTime "truncnormal(75s, 15s)"
+param **.SecurityBooth1.serviceTime "truncnormal(30s, 10s)"
+param **.SecurityBooth2.serviceTime "truncnormal(30s, 10s)"
+param **.Source.numJobs 1500
+param **.Source.startTime 0s
+param **.Source.stopTime 18000s
+
+vector 0 AmusementAlt3.TicketQueue1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 AmusementAlt3.SecurityQueue1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 AmusementAlt3.EnterPark lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1284 39227 0 7022 0 18055.226770799124 1387 0 13 6107 40221
+1	40511 18780 0 7038 0 18120.957667762143 665 0 3 474 624
+2	59291 37035 20 7049 97.47993272911 18167.904825175049 881 51.121630657645 370.10884374613 153882.28324824 30509183.770111
+

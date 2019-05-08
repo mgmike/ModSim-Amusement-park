@@ -1,0 +1,11 @@
+run,repetition,Module,busy:timeavg,created:last,delaysVisited:max,delaysVisited:mean,dropped:count,generation:max,generation:mean,lifeTime:max,lifeTime:mean,queueingTime:max,queueingTime:mean,queueLength:max,queueLength:timeavg,queuesVisited:max,queuesVisited:mean,totalDelayTime:max,totalDelayTime:mean,totalQueueingTime:max,totalQueueingTime:mean,totalServiceTime:max,totalServiceTime:mean
+General-0-20190508-14:28:33-4536,0,AmusementAlt3.Source,NaN,881,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+General-0-20190508-14:28:33-4536,0,AmusementAlt3.TicketQueue1,NaN,NaN,NaN,NaN,0,NaN,NaN,NaN,NaN,234.75594189991,83.056723391795,13,3.1681313758731,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+General-0-20190508-14:28:33-4536,0,AmusementAlt3.TicketBooth1,0.95410689297786,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+General-0-20190508-14:28:33-4536,0,AmusementAlt3.TicketBooth2,0.92436062274014,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+General-0-20190508-14:28:33-4536,0,AmusementAlt3.TicketBooth3,0.90735399656182,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+General-0-20190508-14:28:33-4536,0,AmusementAlt3.TicketBooth4,0.86590009603732,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+General-0-20190508-14:28:33-4536,0,AmusementAlt3.SecurityQueue1,NaN,NaN,NaN,NaN,0,NaN,NaN,NaN,NaN,45.148312461574,12.290232505175,3,0.22459151074283,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+General-0-20190508-14:28:33-4536,0,AmusementAlt3.SecurityBooth1,0.75146137868026,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+General-0-20190508-14:28:33-4536,0,AmusementAlt3.SecurityBooth2,0.67410124768136,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN
+General-0-20190508-14:28:33-4536,0,AmusementAlt3.EnterPark,NaN,NaN,0,0,NaN,0,0,370.10884374613,174.66774489017,NaN,NaN,NaN,NaN,4,2.3269012485812,0,0,236.99520901994,69.964434168254,173.53869300255,104.70331072191

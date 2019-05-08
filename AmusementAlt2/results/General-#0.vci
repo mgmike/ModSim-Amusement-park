@@ -1,0 +1,50 @@
+file 113592 1557343483                                          
+version 2
+run General-0-20190508-15:23:31-6440
+attr configname General
+attr datetime 20190508-15:23:31
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network AmusementAlt2
+attr processid 6440
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.Source.interArrivalTime exponential(20s)
+param **.TicketBooth1.serviceTime "truncnormal(75s, 15s)"
+param **.TicketBooth2.serviceTime "truncnormal(75s, 15s)"
+param **.TicketBooth3.serviceTime "truncnormal(75s, 15s)"
+param **.TicketBooth4.serviceTime "truncnormal(75s, 15s)"
+param **.SecurityBooth1.serviceTime "truncnormal(30s, 10s)"
+param **.SecurityBooth2.serviceTime "truncnormal(30s, 10s)"
+param **.Source.numJobs 1500
+param **.Source.startTime 0s
+param **.Source.stopTime 18000s
+
+vector 0 AmusementAlt2.TicketQueue1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 AmusementAlt2.SecurityQueue1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 AmusementAlt2.TicketQueue2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 AmusementAlt2.SecurityQueue2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 4 AmusementAlt2.EnterPark lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1548 22363 0 8171 0 18063.513097586873 793 0 13 3108 18584
+1	23911 12249 0 8202 0 18152.044627298798 435 0 3 241 269
+2	36160 23778 0 8239 0 18388.036347290808 831 0 19 5571 60007
+3	59938 15085 0 8234 0 18344.668131229776 535 0 2 305 343
+4	75023 38567 34 8254 125.016416528042 18494.136463588657 917 57.301639110478 830.61890800062 266496.93851611 103330278.31274
+

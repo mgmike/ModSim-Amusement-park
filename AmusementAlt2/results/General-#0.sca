@@ -1,0 +1,167 @@
+version 2
+run General-0-20190508-15:23:31-6440
+attr configname General
+attr datetime 20190508-15:23:31
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network AmusementAlt2
+attr processid 6440
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.Source.interArrivalTime exponential(20s)
+param **.TicketBooth1.serviceTime "truncnormal(75s, 15s)"
+param **.TicketBooth2.serviceTime "truncnormal(75s, 15s)"
+param **.TicketBooth3.serviceTime "truncnormal(75s, 15s)"
+param **.TicketBooth4.serviceTime "truncnormal(75s, 15s)"
+param **.SecurityBooth1.serviceTime "truncnormal(30s, 10s)"
+param **.SecurityBooth2.serviceTime "truncnormal(30s, 10s)"
+param **.Source.numJobs 1500
+param **.Source.startTime 0s
+param **.Source.stopTime 18000s
+
+scalar AmusementAlt2.Source created:last 917
+attr interpolationmode none
+attr title "the number of jobs created, last"
+scalar AmusementAlt2.TicketQueue1 queueingTime:mean 146.21475323197
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar AmusementAlt2.TicketQueue1 queueingTime:max 420.89184043525
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar AmusementAlt2.TicketQueue1 queueLength:timeavg 3.1307783628532
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar AmusementAlt2.TicketQueue1 queueLength:max 13
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar AmusementAlt2.TicketQueue1 dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar AmusementAlt2.TicketBooth1 busy:timeavg 0.92161385313519
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar AmusementAlt2.TicketBooth2 busy:timeavg 0.90076761163342
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar AmusementAlt2.TicketBooth3 busy:timeavg 0.94052250871387
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar AmusementAlt2.TicketBooth4 busy:timeavg 0.94337826617071
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar AmusementAlt2.SecurityQueue1 queueingTime:mean 16.707497109312
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar AmusementAlt2.SecurityQueue1 queueingTime:max 78.880004562848
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar AmusementAlt2.SecurityQueue1 queueLength:timeavg 0.19603655893092
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar AmusementAlt2.SecurityQueue1 queueLength:max 3
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar AmusementAlt2.SecurityQueue1 dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar AmusementAlt2.SecurityBooth1 busy:timeavg 0.71836507777701
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar AmusementAlt2.SecurityBooth2 busy:timeavg 0.76364593362618
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar AmusementAlt2.EnterPark generation:mean 0
+attr interpolationmode none
+attr title "the generation of the arrived jobs, mean"
+scalar AmusementAlt2.EnterPark generation:max 0
+attr interpolationmode none
+attr title "the generation of the arrived jobs, max"
+scalar AmusementAlt2.EnterPark delaysVisited:mean 0
+attr interpolationmode none
+attr title "the total number of delays visited by arrived jobs, mean"
+scalar AmusementAlt2.EnterPark delaysVisited:max 0
+attr interpolationmode none
+attr title "the total number of delays visited by arrived jobs, max"
+scalar AmusementAlt2.EnterPark queuesVisited:mean 2.824427480916
+attr interpolationmode none
+attr title "the total number of queues visited by arrived jobs, mean"
+scalar AmusementAlt2.EnterPark queuesVisited:max 4
+attr interpolationmode none
+attr title "the total number of queues visited by arrived jobs, max"
+scalar AmusementAlt2.EnterPark totalServiceTime:mean 104.63795354215
+attr interpolationmode none
+attr title "the total time spent  by arrived jobs, mean"
+attr unit s
+scalar AmusementAlt2.EnterPark totalServiceTime:max 155.20476353471
+attr interpolationmode none
+attr title "the total time spent  by arrived jobs, max"
+attr unit s
+scalar AmusementAlt2.EnterPark totalDelayTime:mean 0
+attr interpolationmode none
+attr title "the total time spent in delay nodes by arrived jobs, mean"
+attr unit s
+scalar AmusementAlt2.EnterPark totalDelayTime:max 0
+attr interpolationmode none
+attr title "the total time spent in delay nodes by arrived jobs, max"
+attr unit s
+scalar AmusementAlt2.EnterPark totalQueueingTime:mean 185.98030001959
+attr interpolationmode none
+attr title "the total time spent in queues by arrived jobs, mean"
+attr unit s
+scalar AmusementAlt2.EnterPark totalQueueingTime:max 735.95844253634
+attr interpolationmode none
+attr title "the total time spent in queues by arrived jobs, max"
+attr unit s
+scalar AmusementAlt2.EnterPark lifeTime:mean 290.61825356174
+attr interpolationmode none
+attr title "lifetime of arrived jobs, mean"
+attr unit s
+scalar AmusementAlt2.EnterPark lifeTime:max 830.61890800062
+attr interpolationmode none
+attr title "lifetime of arrived jobs, max"
+attr unit s
+scalar AmusementAlt2.TicketQueue2 queueingTime:mean 251.4280617198
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar AmusementAlt2.TicketQueue2 queueingTime:max 689.34448781746
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar AmusementAlt2.TicketQueue2 queueLength:timeavg 5.6419312044737
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar AmusementAlt2.TicketQueue2 queueLength:max 19
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar AmusementAlt2.TicketQueue2 dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar AmusementAlt2.SecurityQueue2 queueingTime:mean 17.508315923844
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar AmusementAlt2.SecurityQueue2 queueingTime:max 61.174583645448
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar AmusementAlt2.SecurityQueue2 queueLength:timeavg 0.25276770077208
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar AmusementAlt2.SecurityQueue2 queueLength:max 2
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar AmusementAlt2.SecurityQueue2 dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+
